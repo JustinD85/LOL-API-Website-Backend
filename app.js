@@ -3,7 +3,11 @@ const axios = require('axios');
 const apiKey = `api_key=RGAPI-6c4f0334-3d97-482b-a5f6-dc71bf0b62a0`;
 const riotUrl = `https://na1.api.riotgames.com/lol/`;
 app = express();
-
+const cors = require('cors');
+app.use(cors({
+  origin: 'http://localhost:3000',
+  credentials: true
+}));
 app.get('/', function (req, res, next) {
   let summonerName = `${riotUrl}summoner/v3/summoners/by-name/${req.query.name}?${apiKey}`;
   axios(summonerName)
