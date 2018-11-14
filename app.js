@@ -5,7 +5,7 @@ const riotUrl = `https://na1.api.riotgames.com/lol/`;
 app = express();
 const cors = require('cors');
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: 'http://172.31.0.40:3000',
   credentials: true
 }));
 app.get('/', function (req, res, next) {
