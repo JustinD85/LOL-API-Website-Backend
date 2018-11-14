@@ -1,0 +1,11 @@
+.Points{
+  float:right;
+}
+
+.Container {
+  border: 1px #eee solid;
+  padding: 10px;
+  width: 30%;
+  min-width: 400px;
+  min-height: 40px;
+}
