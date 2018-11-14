@@ -11,7 +11,7 @@ class App extends Component {
   
   findNameHandler = () => {
     const name = document.querySelector('#input').value;
-    fetch(`http://18.223.240.88:3131/users?name=${name}`, {mode:'no-cors'})
+    fetch(`https://18.223.240.88:3131/users?name=${name}`, {mode:'no-cors'})
     .then(res => res.json())
     .then(e => this.setState({ data: e }))
   }
