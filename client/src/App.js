@@ -10,7 +10,7 @@ class App extends Component {
   }  
   findNameHandler = () => {
     const name = document.querySelector('#input').value;
-    axios(`https://172.31.0.40:3131/?name=${name}`)
+    axios(`https://falsemotive.io/?name=${name}`)
       .then(res => { console.log(res.data);this.setState({ data: res.data })})
       //.then(e => this.setState({ data: e }))
       .catch(e => console.error(e));

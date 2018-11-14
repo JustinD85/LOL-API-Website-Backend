@@ -6,7 +6,7 @@ const riotUrl = `https://na1.api.riotgames.com/lol/`;
 app = express();
 const cors = require('cors');
 app.use(cors({
-  origin: 'https://172.31.0.40:80',
+  origin: 'https://falsemotive.com',
   credentials: true
 }));
 app.get('/', function (req, res, next) {
@@ -26,4 +26,4 @@ app.get('/', function (req, res, next) {
       );
     }).catch(e => console.log(e))
 });
-app.listen(3131, ()=> console.log('We on: 3131 😎'))
+app.listen(80, ()=> console.log('We on: 80 😎'))
