@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Summoner from './Summoner/Summoner'
-import Data from './DummyData/Data';
 
 class App extends Component {
   state = {}
@@ -14,7 +13,7 @@ class App extends Component {
     .then(res => res.json())
     .then(e => this.setState({ data: e }))
   }
-  
+
   render() {
     const lightWeightFont = { textAlign: 'center', fontWeight: 10 };
     const leftAlignStyle = { marginLeft: '5%', fontWeight: 10, textAlign: 'left' };
