@@ -7,14 +7,14 @@ class App extends Component {
 
   componentDidMount() {
     
-  }
-  
+  }  
   findNameHandler = () => {
     const name = document.querySelector('#input').value;
     fetch(`https://172.31.0.40:3131/users?name=${name}`, {mode:'no-cors'})
     .then(res => res.json())
     .then(e => this.setState({ data: e }))
   }
+  
   render() {
     const lightWeightFont = { textAlign: 'center', fontWeight: 10 };
     const leftAlignStyle = { marginLeft: '5%', fontWeight: 10, textAlign: 'left' };
