@@ -9,7 +9,7 @@ class App extends Component {
   }  
   findNameHandler = () => {
     const name = document.querySelector('#input').value;
-    fetch(`http://localhost:3131/users?name=${name}`, {mode:'no-cors'})
+    fetch(`../../users?name=${name}`, {mode:'no-cors'})
     .then(res => res.json())
     .then(e => this.setState({ data: e }))
   }
