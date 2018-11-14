@@ -1,11 +1,12 @@
 var express = require('express');
 const axios = require('axios');
+const https = require('https');
 const apiKey = `api_key=RGAPI-6c4f0334-3d97-482b-a5f6-dc71bf0b62a0`;
 const riotUrl = `https://na1.api.riotgames.com/lol/`;
 app = express();
 const cors = require('cors');
 app.use(cors({
-  origin: 'http://172.31.0.40:3000',
+  origin: 'https://172.31.0.40:80',
   credentials: true
 }));
 app.get('/', function (req, res, next) {
