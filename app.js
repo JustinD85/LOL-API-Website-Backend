@@ -1,7 +1,7 @@
 var express = require('express');
 const axios = require('axios');
 const https = require('https');
-const apiKey = `api_key=RGAPI-6c4f0334-3d97-482b-a5f6-dc71bf0b62a0`;
+const apiKey = `api_key=${process.env.LEAGUE_DEVELOPER_KEY}`;
 const riotUrl = `https://na1.api.riotgames.com/lol/`;
 app = express();
 const cors = require('cors');
