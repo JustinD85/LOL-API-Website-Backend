@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const axios = require('axios');
-const apiKey = `api_key=RGAPI-6c4f0334-3d97-482b-a5f6-dc71bf0b62a0`;
+const apiKey = `api_key=${process.env.LOL_DEV_KEY}`;
 const riotUrl = `https://na1.api.riotgames.com/lol/`;
 
 router.get('/', function (req, res, next) {
