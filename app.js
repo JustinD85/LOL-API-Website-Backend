@@ -5,10 +5,12 @@ const apiKey = `api_key=${process.env.LEAGUE_DEVELOPER_KEY}`;
 const riotUrl = `https://na1.api.riotgames.com/lol/`;
 app = express();
 const cors = require('cors');
+
 app.use(cors({
   origin: 'https://falsemotive.com',
   credentials: true
 }));
+
 app.get('/', function (req, res, next) {
   let summonerName = `${riotUrl}summoner/v3/summoners/by-name/${req.query.name}?${apiKey}`;
   axios(summonerName)
@@ -20,10 +22,10 @@ app.get('/', function (req, res, next) {
       const match = `match/v3/matches/${thatInfo.data.matches[0].gameId}?`;
       return axios(`${riotUrl}${match}${apiKey}`)
     }).then(e => {
-      console.log(typeof e.data);
       res.json(
         e.data
       );
     }).catch(e => console.log(e))
 });
+
 app.listen(80, ()=> console.log('We on: 80 😎'))
